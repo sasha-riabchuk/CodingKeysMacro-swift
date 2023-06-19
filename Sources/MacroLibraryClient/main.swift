@@ -1,6 +1,8 @@
 import MacroLibrary
 
-@CodingKeysMacro<Address>()
+@CodingKeysMacro<Address>([
+    \.buildingNumber: "building_number"
+])
 struct Address: Codable {
     var buildingNumber: String?
     let city: String?
@@ -9,7 +11,6 @@ struct Address: Codable {
     let country: String?
     let registryBuildingNumber: String?
     let street: String?
-    let uirAdrId: String?
     let zipCode: String?
 }
 
