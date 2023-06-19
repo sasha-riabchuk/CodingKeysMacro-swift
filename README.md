@@ -1,4 +1,4 @@
-# Swift CodingKeys Macro Library
+# Library CodingKeysMacro-swift
 
 Swift CodingKeys Macro Library is an incredibly powerful Swift Compiler Plugin that introduces an automated way to generate `CodingKeys` for Codable structs in Swift. This eliminates the need for manually declaring `CodingKeys` enumeration for every Codable struct, saving you valuable time and reducing the possibility of human errors.
 
@@ -18,8 +18,6 @@ Swift CodingKeys Macro Library is an incredibly powerful Swift Compiler Plugin t
 Using this library is super simple. Here's an example:
 
 ```swift
-
-import SwiftCodingKeysMacroLibrary
 
 @CodingKeysMacro<Address>([
     \.buildingNumber: "building_number"
