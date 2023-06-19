@@ -6,7 +6,7 @@ Swift CodingKeys Macro Library is an incredibly powerful Swift Compiler Plugin t
 
 ### Swift Package Manager
 
-`.package(url: "https://github.com/user/SwiftCodingKeysMacroLibrary.git", from: "1.0.0")`
+`.package(url: "https://github.com/sasha-riabchuk/CodingKeysMacro-swift", from: "1.0.0")`
 
 ## Why Swift CodingKeys Macro Library is Super
 
