@@ -5,9 +5,13 @@ Swift CodingKeys Macro Library is an incredibly powerful Swift Compiler Plugin t
 ## Why Swift CodingKeys Macro Library is Super
 
 1\. **Automation**: No need to manually write `CodingKeys` for each property. This library does that for you!
+
 2\. **Reduced Errors**: Manual errors that occur while writing `CodingKeys` manually are significantly reduced.
+
 3\. **Time-Saving**: Less time spent on boilerplate means more time for writing the code that matters.
+
 4\. **Flexibility**: You have the freedom to specify custom string representation for any property.
+
 
 ## How to Use
 
