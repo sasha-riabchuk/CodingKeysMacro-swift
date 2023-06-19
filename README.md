@@ -5,24 +5,9 @@ Swift CodingKeys Macro Library is an incredibly powerful Swift Compiler Plugin t
 ## Why Swift CodingKeys Macro Library is Super
 
 1\. **Automation**: No need to manually write `CodingKeys` for each property. This library does that for you!
-
 2\. **Reduced Errors**: Manual errors that occur while writing `CodingKeys` manually are significantly reduced.
-
 3\. **Time-Saving**: Less time spent on boilerplate means more time for writing the code that matters.
-
 4\. **Flexibility**: You have the freedom to specify custom string representation for any property.
-
-## Installation
-
-### Swift Package Manager
-
-You can install Swift CodingKeys Macro Library using the Swift Package Manager by adding the following line to your `Package.swift` file in the dependencies array:
-
-```swift
-
-.package(url: "https://github.com/sasha-riabchuk/CodingKeysMacro-swift.git", from: "1.0.0")
-
-```
 
 ## How to Use
 
@@ -32,32 +17,38 @@ Using this library is super simple. Here's an example:
 
 import SwiftCodingKeysMacroLibrary
 
-@CodingKeysMacro<Address>()
+@CodingKeysMacro<Address>([
+    \.buildingNumber: "building_number"
+])
 
 struct Address: Codable {
-
     var buildingNumber: String?
-
     let city: String?
-
     let cityPart: String?
-
     let district: String?
-
     let country: String?
-
     let registryBuildingNumber: String?
-
     let street: String?
-
     let zipCode: String?
-
 }
 
 ```
 
 Just apply the `@CodingKeysMacro<Type>` annotation to your Codable struct and the library will take care of the rest. It will generate the `CodingKeys` enumeration for your Codable struct.
 
----
+The example above will generate the following `CodingKeys`:
 
-Feel free to customize this template based on your needs and the specific features of your library. Remember to replace `"https://github.com/user/SwiftCodingKeysMacroLibrary.git"` with the actual URL to your repository.
+```swift
+
+enum CodingKeys: String, CodingKey {
+    case buildingNumber = "building_number"
+    case city
+    case cityPart
+    case district
+    case country
+    case registryBuildingNumber
+    case street
+    case zipCode
+}
+
+```
