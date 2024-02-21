@@ -95,7 +95,7 @@ public struct CodingKeysMacro: MemberMacro {
         
         return [
             """
-            enum CodingKeys: String, CodingKey {
+            enum CodingKeys: String, CodingKey, CaseIterable {
                 \(raw: parameters)
             }
             """
